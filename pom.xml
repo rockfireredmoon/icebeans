@@ -7,7 +7,7 @@
 	<name>Icebeans</name>
 	<description>Some simple annotations used to generate a UI from plain old Java objects.</description>
 	<groupId>io.github.rockfireredmoon</groupId>
-	<version>0.9.0</version>
+	<version>0.9.1-SNAPSHOT</version>
 	<scm>
 		<connection>scm:git:git://github.com/rockfireredmoon/icebeans.git</connection>
 		<developerConnection>scm:git:git@github.com:rockfireredmoon/rockfireredmoon.git</developerConnection>
@@ -39,6 +39,11 @@
 			<name>rockfireredmoon-ice</name>
 			<url>https://api.bintray.com/maven/rockfireredmoon/ice/${project.artifactId}/;publish=1</url>
 		</repository>
+		<snapshotRepository>
+			<id>theanubianwar-snapshots</id>
+			<name>The Anubian War - Snapshots Repository</name>
+			<url>scp://files.theanubianwar.com/srv/files.theanubianwar.com/public/htdocs/maven/snapshots</url>
+		</snapshotRepository>
 	</distributionManagement>
 
 	<profiles>
@@ -99,19 +104,6 @@
 						<version>1.9.5</version>
 					</dependency>
 				</dependencies>
-			</plugin>
-			<plugin>
-				<artifactId>maven-deploy-plugin</artifactId>
-				<version>3.0.0-M1</version>
-				<executions>
-					<execution>
-						<id>default-deploy</id>
-						<phase>deploy</phase>
-						<goals>
-							<goal>deploy</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
